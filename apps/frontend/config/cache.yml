@@ -1,0 +1,15 @@
+default:
+  enabled:     off
+  with_layout: false
+  lifetime:    86400
+
+show:
+  enabled: on
+  type: page
+  lifetime:    86400
+
+wanderupdate:
+  enabled: on
+  type: page
+  lifetime:    86400
+  

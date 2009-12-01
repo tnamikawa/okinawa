@@ -1,0 +1,62 @@
+Photo:
+  p1:
+    title: '公園にあるパンダとリスの遊具'
+    comment: '古ぼけてますね'
+    filename: 'IMGP1218.JPG'
+    shot_date: '2007-04-03 10:11'
+  p2:
+    title: '電柱をはさんで向かい合う二匹の猫'
+    comment: '微妙な仲なのでしょうか'
+    filename: 'IMGP1197.JPG'
+    shot_date: '2007-04-03 12:05'
+  p3:
+    title: '公園のすべり台'
+    comment: '植物がしげっていますね'
+    filename: 'IMGP1105.JPG'
+    shot_date: '2007-04-04 15:40'
+  p4:
+    title: '花の向こうにある空'
+    comment: '4月となればもう花が咲いています'
+    filename: 'IMGP1104.JPG'
+    shot_date: '2007-04-03 09:03'
+
+Tag:
+  t1:
+    title: '公園'
+  t2:
+    title: '猫'
+  t3:
+    title: '花'
+  t4:
+    title: '空'
+  t5:
+    title: '電柱'
+  t6:
+    title: '動物'
+
+PhotoAndTag:
+  r1:
+    photo_id: 1
+    tag_id: 1
+  r2:
+    photo_id: 2
+    tag_id: 2
+  r3:
+    photo_id: 2
+    tag_id: 5
+  r4:
+    photo_id: 3
+    tag_id: 1
+  r5:
+    photo_id: 4
+    tag_id: 3
+  r6:
+    photo_id: 4
+    tag_id: 4
+  r7:
+    photo_id: 1
+    tag_id: 6
+  r8:
+    photo_id: 2
+    tag_id: 6
+    

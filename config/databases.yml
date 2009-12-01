@@ -1,0 +1,7 @@
+all:
+  propel:
+    class:          sfPropelDatabase
+    param:
+      dsn:          mysql://okinawa:okinawa@localhost/okinawa
+      encoding:     utf8
+      

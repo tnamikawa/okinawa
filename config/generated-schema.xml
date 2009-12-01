@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="propel" defaultIdMethod="native" noXsd="true" package="lib.model">
+
+  <table name="photo_mst" phpName="Photo">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="title" type="varchar" required="true" size="255" />
+    <column name="filename" type="varchar" required="true" size="64" />
+    <column name="comment" type="varchar" required="false" size="255" />
+    <column name="width" type="integer" />
+    <column name="height" type="integer" />
+    <column name="thumb_width" type="integer" />
+    <column name="thumb_height" type="integer" />
+    <column name="icon_width" type="integer" />
+    <column name="icon_height" type="integer" />
+    <column name="wander_width" type="integer" />
+    <column name="wander_height" type="integer" />
+    <column name="longitude" type="double" />
+    <column name="latitude" type="double" />
+    <column name="shot_date" type="timestamp" />
+    <column name="open_date" type="date" />
+    <column name="modified_date" type="timestamp" />
+    <column name="metamodified_date" type="timestamp" />
+    <column name="filemtime" type="timestamp" />
+    <column name="created_at" type="timestamp" />
+    <column name="updated_at" type="timestamp" />
+    <unique name="filename_uniq">
+      <unique-column name="filename" />
+    </unique>
+    <unique name="title_uniq">
+      <unique-column name="title" />
+    </unique>
+  </table>
+
+  <table name="tag_mst" phpName="Tag">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="title" type="varchar" required="true" size="255" />
+    <column name="englishtitle" type="varchar" required="true" size="255" />
+    <column name="filename" type="varchar" size="64" />
+    <column name="description" type="varchar" size="255" />
+    <column name="order_priority" type="integer" />
+    <column name="created_at" type="timestamp" />
+    <column name="updated_at" type="timestamp" />
+  </table>
+
+  <table name="photo_and_tag_rel" phpName="PhotoAndTag">
+    <column name="photo_id" type="integer" required="true" />
+    <column name="tag_id" type="integer" />
+    <column name="open_flag" type="integer" required="true" />
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+  </table>
+
+  <table name="blog_photo_mst" phpName="BlogPhoto">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="photo_id" type="integer" required="true" />
+    <column name="use_date" type="date" />
+  </table>
+
+  <table name="wall_mst" phpName="Wall">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="photo_id" type="integer" required="true" />
+  </table>
+
+  <table name="top_photo" phpName="Top">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="photo_id" type="integer" required="true" />
+    <column name="text_color" type="varchar" required="true" size="7" />
+    <column name="link_color" type="varchar" required="true" size="7" />
+  </table>
+
+  <table name="view_log" phpName="ViewLog">
+    <column name="photo_id" type="integer" required="true" />
+    <column name="ipaddress" type="varchar" required="true" size="15" />
+    <column name="created_at" type="timestamp" />
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+  </table>
+
+  <table name="linkcategory_mst" phpName="LinkCategory">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="title" type="varchar" required="true" size="64" />
+    <column name="order_priority" type="integer" required="true" />
+  </table>
+
+  <table name="link_mst" phpName="Link">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="url" type="varchar" required="true" size="255" />
+    <column name="title" type="varchar" required="true" size="64" />
+    <column name="description" type="varchar" required="true" size="255" />
+    <column name="category_id" type="integer" required="true" />
+    <column name="inserted_at" type="timestamp" required="true" />
+  </table>
+
+  <table name="note_mst" phpName="Note">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="photo_id" type="integer" />
+    <column name="name" type="varchar" required="true" size="64" />
+    <column name="content" type="longvarchar" required="true" />
+    <column name="font_family" type="integer" required="true" />
+    <column name="font_size" type="integer" required="true" />
+    <column name="write_date" type="timestamp" required="true" />
+  </table>
+
+  <table name="carte_mst" phpName="Carte">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="title" type="varchar" required="true" size="255" />
+    <column name="englishtitle" type="varchar" required="true" size="255" />
+    <column name="filename" type="varchar" required="true" size="64" />
+    <column name="comment" type="varchar" required="false" size="255" />
+    <column name="width" type="integer" />
+    <column name="height" type="integer" />
+    <column name="thumb_width" type="integer" />
+    <column name="thumb_height" type="integer" />
+    <column name="ins_date" type="date" />
+    <unique name="filename_uniq">
+      <unique-column name="filename" />
+    </unique>
+    <unique name="title_uniq">
+      <unique-column name="title" />
+    </unique>
+  </table>
+
+  <table name="cartetag_mst" phpName="CarteTag">
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+    <column name="title" type="varchar" required="true" size="255" />
+    <column name="englishtitle" type="varchar" required="true" size="255" />
+    <column name="description" type="varchar" size="255" />
+  </table>
+
+  <table name="carte_and_tag_rel" phpName="CarteAndTag">
+    <column name="carte_id" type="integer" required="true" />
+    <column name="tag_id" type="integer" />
+    <column name="id" type="integer" required="true" primaryKey="true" autoincrement="true" />
+  </table>
+
+</database>
