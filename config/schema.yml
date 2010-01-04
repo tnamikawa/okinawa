@@ -1,0 +1,253 @@
+propel:
+  photo_mst:
+    _attributes:
+      phpName: Photo
+    _uniques:
+      filename_uniq: [filename]
+      title_uniq: [title]
+    id:
+    title:
+      type: varchar(255)
+      required: true
+    filename:
+      type: varchar(64)
+      required: true
+    comment:
+      type: varchar(255)
+      required: false
+    width:
+      type: integer
+    height:
+      type: integer
+    thumb_width:
+      type: integer
+    thumb_height:
+      type: integer
+    icon_width:
+      type: integer
+    icon_height:
+      type: integer
+    wander_width:
+      type: integer
+    wander_height:
+      type: integer
+    slide_width:
+      type: integer
+    slide_height:
+      type: integer
+    longitude:
+      type: double
+    latitude:
+      type: double
+    shot_date:
+      type: timestamp
+    open_date:
+      type: date
+    modified_date:
+      type: timestamp
+    metamodified_date:
+      type: timestamp
+    filemtime:
+      type: timestamp
+    created_at:
+    updated_at:
+
+  tag_mst:
+    _attributes:
+      phpName: Tag
+    id:
+    title:
+      type: varchar(255)
+      required: true
+    englishtitle:
+      type: varchar(255)
+      required: true
+    filename:
+      type: varchar(64)
+    description:
+      type: varchar(255)
+    order_priority:
+      type: integer
+    created_at:
+    updated_at:
+
+  photo_and_tag_rel:
+    _attributes:
+      phpName: PhotoAndTag
+    photo_id:
+      type: integer
+      required: true
+    tag_id:
+      type: integer
+    open_flag:
+      type: integer
+      required: true
+
+  blog_photo_mst:
+    _attributes:
+      phpName: BlogPhoto
+    id:
+    photo_id:
+      type: integer
+      required: true
+    use_date:
+      type: date
+
+  wall_mst:
+    _attributes:
+      phpName: Wall
+    id:
+    photo_id:
+      type: integer
+      required: true
+
+  top_photo:
+    _attributes:
+      phpName: Top
+    id:
+    photo_id:
+      type: integer
+      required: true
+    text_color:
+      type: varchar(7)
+      required: true
+    link_color:
+      type: varchar(7)
+      required: true
+
+  view_log:
+    _attributes:
+      phpName: ViewLog
+    photo_id:
+      type: integer
+      required: true
+    ipaddress:
+      type: varchar(15)
+      required: true
+    created_at:
+  
+  linkcategory_mst:
+    _attributes:
+      phpName: LinkCategory
+    id:
+    title:
+      type: varchar(64)
+      required: true
+    order_priority:
+      type: integer
+      required: true
+
+  link_mst:
+    _attributes:
+      phpName: Link
+    id:
+    url:
+      type: varchar(255)
+      required: true
+    title:
+      type: varchar(64)
+      required: true
+    description:
+      type: varchar(255)
+      required: true
+    category_id:
+      type: integer
+      required: true
+    inserted_at:
+      type: timestamp
+      required: true
+
+  seolink_mst:
+    _attributes:
+      phpName: SeoLink
+    id:
+    linkstr:
+      type: varchar(255)
+      required: true
+
+  note_mst:
+    _attributes:
+      phpName: Note
+    id:
+    photo_id:
+      type: integer
+    name:
+      type: varchar(64)
+      required: true
+    content:
+      type: longvarchar
+      required: true
+    font_family:
+      type: integer
+      required: true
+    font_size:
+      type: integer
+      required: true
+    write_date:
+      type: timestamp
+      required: true
+  
+  blogpartsuser_mst:
+    _attributes:
+      phpName: Blogger
+    id:
+    url:
+      type: varchar(64)
+      required: true
+    last_access:
+      type: date
+      required: true
+  
+  carte_mst:
+    _attributes:
+      phpName: Carte
+    _uniques:
+      filename_uniq: [filename]
+      title_uniq: [title]
+    id:
+    title:
+      type: varchar(255)
+      required: true
+    englishtitle:
+      type: varchar(255)
+      required: true
+    filename:
+      type: varchar(64)
+      required: true
+    comment:
+      type: varchar(255)
+      required: false
+    width:
+      type: integer
+    height:
+      type: integer
+    thumb_width:
+      type: integer
+    thumb_height:
+      type: integer
+    ins_date:
+      type: date
+
+  cartetag_mst:
+    _attributes:
+      phpName: CarteTag
+    id:
+    title:
+      type: varchar(255)
+      required: true
+    englishtitle:
+      type: varchar(255)
+      required: true
+    description:
+      type: varchar(255)
+
+  carte_and_tag_rel:
+    _attributes:
+      phpName: CarteAndTag
+    carte_id:
+      type: integer
+      required: true
+    tag_id:
+      type: integer
+
+
