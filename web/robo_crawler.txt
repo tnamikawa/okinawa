@@ -1,3 +1,0 @@
-User-agent: *
-Sitemap: http://photo-okinawa.com/sitemap.xml
-Disallow: /links/
