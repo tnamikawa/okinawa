@@ -1,0 +1,449 @@
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input
+{ margin: 0; padding: 0; }
+a img,:link img,:visited img { border: none; }
+
+a
+{
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+a:link a:visited
+{
+  color: #444444;
+}
+
+body, td
+{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 11px;
+}
+
+body
+{
+  background-color: #f3f2f1;
+  color: #000000;
+}
+
+div.thumbphoto
+{
+  text-align:center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 67px;
+}
+
+div.topframe
+{
+  height:10px;
+  background-image: url(/images/splitter1.gif);
+  background-repeat: repeat-x;
+}
+
+table.mainphoto
+{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
+  width: 99%;
+  height: 560px;
+}
+
+h1.title
+{
+  font-size: 24px;
+  color: #222222;
+  text-align: left;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+div.comment
+{
+  font-size: 18px;
+  color: #222222;
+  text-align: left;
+  margin-top: 8px;
+  margin-left:10px;
+}
+
+p.date
+{
+  margin-top: 2px;
+  margin-right:10px;
+  font-size: 16px;
+  text-align: right;
+  color: #222222;
+}
+
+div.right {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+div.right img {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+h3.sub
+{
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+h3.sub a {
+  color: #222222;
+}
+
+p.keyword
+{
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+p.keywordall
+{
+  font-size: 16px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.tool div.box
+{
+  background-color: #ddffee;
+  padding: 10px 20px;
+  margin-top: 30px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+div.tool
+{
+  text-align: center;
+}
+
+h2.boxtitle
+{
+  text-align: left;
+  font-size: 14px;
+}
+
+.tool table {
+  border: 1px solid #808080;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.tool th {
+  text-align: right;
+  padding-right: 2px;
+}
+
+.tool td {
+  text-align: left;
+  padding-left: 2px;
+}
+
+div.edit {
+  text-align: center;
+  margin-top:10px;
+}
+
+div.edit table {
+  text-align: center;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.edit th {
+  text-align: right;
+}
+
+div.edit td {
+  text-align: left;
+}
+
+table.keywordlist {
+  border: 0px;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+table.keywordlist td {
+  padding: 5px 4px 5px 4px;
+  width: 108px;
+  height: 77px;
+  text-align:center;
+}
+
+div#result {
+  border: 1px dotted #808080;
+  background-color: #d0d0d0;
+  padding: 5px;
+  font-size: 15px;
+  margin: 10px;
+}
+
+div#topbg {
+  margin-left: auto;
+  margin-right: auto;
+  width:910px;
+  height: 610px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+div#topbg #l {
+  float: right;
+  width: 500px;
+  vertical-align: top;
+  text-align: left;
+  color: #ffffff;
+}
+
+#l #l2 {
+  margin-top: 12px;
+  margin-left:12px;
+}
+
+#l #l2t {
+  margin-top: 12px;
+  margin-left:12px;
+  height: 560px;
+}
+
+#l #l2b {
+  margin-bottom: 22px;
+  margin-left:12px;
+  height:20px;
+  vertical-align: bottom;
+}
+
+div#topbg #r {
+  float: right;
+  width: 410px;
+  text-align: right;
+  vertical-align: top;
+}
+
+#r #r2 {
+  margin-top: 12px;
+  margin-right:22px;
+}
+
+div.photocover {
+  float:left;
+  height: 78px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-top: 12px; 
+}
+
+div.photoframe {
+  border-width: 0px;
+  background-color: #ffffff;
+  padding: 3px 3px 3px 3px;
+  text-align:center;
+  font-size: 10px;
+  color: black;
+  margin: auto auto auto auto;
+}
+
+div#profilebg {
+  margin-left: auto;
+  margin-right: auto;
+  width:910px;
+  height: 610px;
+  background-image:url('/images/profilebg.jpg');
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+div#profilebg #l {
+  float: right;
+  width: 490px;
+  vertical-align: top;
+  text-align: left;
+}
+
+div#profilebg #r {
+  float: right;
+  width: 420px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+div#profilebg a:link
+{
+  color: #0044dd;
+/*  text-decoration: underline; */
+}
+div#profilebg a:visited
+{
+  color: #0044dd;
+/*  text-decoration: underline; */
+}
+
+div.keywordpager {
+  margin-left: 20px;
+  margin-top:10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+}
+div.keywordpager a:link, a:visited {
+  color: #6060f0;
+}
+div.keywordpager strong {
+  font-size: 18px;
+}
+
+div#blogparts {
+  margin-left: 34px;
+  margin-top: 26px;
+  font-size: 16px;
+  font-color: white;
+}
+
+div#keywordsarea {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div.wallcover {
+  float:left;
+  width: 400px;
+  height: 320px;
+}
+
+div.wallframe {
+  text-align: center;
+  margin-left: 24px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+div.bpcover {
+  float:left;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-top: 12px; 
+}
+
+div.bpframe {
+  border-width: 0px;
+  background-color: #ffffff;
+  padding: 3px 3px 3px 3px;
+  text-align:center;
+  font-size: 10px;
+  color: black;
+  margin: auto auto auto auto;
+}
+
+div.categorytitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #333333;
+}
+
+div.linktitle {
+  font-size: 13px;
+  margin-top: 1px;
+  line-height: 15px;
+}
+div.linktitle a:link {
+  /*color: #666666;*/
+}
+div.linktitle a:visited {
+  /*color: #666666;*/
+}
+
+body.note {
+  /*font-family: "みかちゃん", "あくあフォント", "雑字", "平成明朝体", "MS P明朝" ;*/
+  background-color: #f3f5f2;
+  background-image: url('/images/notebg.jpg');
+  background-repeat: repeat-y;
+  background-position: right;
+}
+
+div.notebody {
+  width: 480px;
+  position: absolute;
+  top:20px;
+  right: 130px;
+  font-size: 14px;
+  font-color:#444444;
+}
+
+td.note {
+  font-size: 14px;
+  font-color:#444444;
+  padding: 6px;
+}
+
+#wanderphoto {
+  margin-top: 20px;
+  height: 267px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#wandertitle {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+#wandercomment {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+#wanderconsole {
+  width: 500px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#console1 {
+  font-size: 13px;
+  padding: 6px;
+}
+#console2 {
+  font-size: 13px;
+  padding: 6px;
+}
+#console3 {
+  font-size: 13px;
+  padding: 6px;
+}
+#console4 {
+  font-size: 13px;
+  padding: 6px;
+}
+
+#console td {
+  padding:5px;
+}
+

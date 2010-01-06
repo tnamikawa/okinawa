@@ -1,0 +1,83 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: photo, action: index }
+
+englishhome:
+  url:   /en/
+  param: { module: photo, action: englishtop }
+
+introduction:
+  url:   /introduction
+  param: { module: photo, action: introduction }
+
+keywordindex:
+  url:	/keywords
+  param: { module: photo, action: keywordindex }
+
+blogparts:
+  url:	/blogparts
+  param: { module: photo, action: blogparts }
+
+blogphoto:
+  url:	/blogphoto/:width
+  param: { module: photo, action: blogphoto }
+
+blogphotobacknumber:
+  url:	/blogphotobacknumber/:id/:width
+  param: { module: photo, action: blogphoto }
+
+blogphotolink:
+  url:	/blogphotolink/:date
+  param: { module: photo, action: blogphotolink }
+
+blogphotolink:
+  url:	/blogphotolink/
+  param: { module: photo, action: blogphotolink }
+
+photo:
+  url: /show/:id
+  param: { module: photo, action: show }
+
+map:
+  url: /map
+  param: { module: photo, action: map }
+
+maplocation:
+  url: /map/:location
+  param: { module: photo, action: map }
+
+mapdirect:
+  url: /map/:longitude/:latitude/:zoom/:title
+  param: { module: photo, action: map }
+
+tag:
+  url: /keyword/:title
+  param: { module: photo, action: keyword }
+
+wallpaper:
+  url: /wallphoto/:id/:size
+  param: { module: photo, action: wallpaper }
+
+wallpaperlist:
+  url: /wallpaper
+  param: { module: photo, action: wallpaperlist }
+
+link:
+  url: /link
+  param: { module: photo, action: link }
+
+note:
+  url: /note
+  param: { module: photo, action: note }
+
+seolink:
+  url: /links/:page
+  param: { module: photo, action: seolink }
+
+default:
+  url:   /:module/:action/*
+
