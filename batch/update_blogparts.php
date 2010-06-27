@@ -1,7 +1,7 @@
 <?php
 
-error_repoting(E_ALL);
 date_default_timezone_set('Asia/Tokyo');
+error_reporting(E_ALL);
 
 // DB接続を確保する
 $con = mysql_connect('localhost', 'okinawa', 'okinawa');
