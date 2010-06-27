@@ -27,6 +27,10 @@ assert($result);
 // 幅ループ
 $widthes = array(120, 140, 160, 180, 200, 220, 240);
 foreach ($widthes as $width) {
+  
+  // 出力パス
+  $path = '/home/okinawa/web/parts/' . $photo_id . '_' . $width . '.jpg';
+  $todaypath = '/home/okinawa/web/parts/today_' . $width . '.jpg';
 
   /// 画像作成
   $height = Math.ceil($width * $photo['height'] / $photo['width']);
@@ -38,6 +42,7 @@ foreach ($widthes as $width) {
   $srcwidth = imagesx($imgSrc);
   $srcheight = imagesy($imgSrc);
   imagecopyresampled($imgDst, $imgSrc, 0, 0, 0, 0, $width, $height, $srcwidth, $srcheight);
+  imagejpeg($imgDst, $path, 80);
   imagejpeg($imgDst, $todaypath, 80);
 }
 
