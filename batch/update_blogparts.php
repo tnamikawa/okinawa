@@ -33,7 +33,7 @@ foreach ($widthes as $width) {
   $todaypath = '/home/okinawa/web/parts/today_' . $width . '.jpg';
 
   /// 画像作成
-  $height = Math.ceil($width * $photo['height'] / $photo['width']);
+  $height = ceil($width * $photo['height'] / $photo['width'];
 
   /// 加工して保存
   $imgSrc = imagecreatefromjpeg($filepath = '/home/photo/' . $photo['filename']);
