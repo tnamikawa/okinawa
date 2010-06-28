@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Tokyo');
 error_reporting(E_ALL);
 
 // DB接続を確保する
-$con = mysql_connect('localhost', 'okinawa', 'okinawa');
+$con = mysql_connect('localhost', 'okinawa', 'okinotorijima');
 mysql_select_db('okinawa');
 mysql_query("SET NAMES UTF8");
 

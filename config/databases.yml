@@ -14,7 +14,7 @@ all:
       classname: PropelPDO
       dsn: 'mysql:host=localhost;dbname=okinawa'
       username: okinawa
-      password: okinawa
+      password: okinotorijima
       encoding: utf8
       persistent: true
       pooling: true
