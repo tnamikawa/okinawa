@@ -35,7 +35,7 @@ blogphotolink:
   param: { module: photo, action: blogphotolink }
 
 blogphotolink:
-  url:	/blogphotolink/
+  url:	/blogphotolink
   param: { module: photo, action: blogphotolink }
 
 photo:
