@@ -822,3 +822,44 @@ Jan 06 22:18:36 symfony [info] {sfWebDebugLogger} Factories 31.99 ms (1)
 Jan 06 22:18:36 symfony [info] {sfWebDebugLogger} Action "photo/index" 15.43 ms (1)
 Jan 06 22:18:36 symfony [info] {sfWebDebugLogger} View "Success" for "photo/index" 9.75 ms (1)
 Jan 06 22:18:36 symfony [info] {sfWebResponse} Send content (101264 o)
+Nov 28 15:03:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'photo',  'action' => 'index',)
+Nov 28 15:03:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 28 15:03:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 28 15:03:13 symfony [info] {photoActions} Call "photoActions->executeIndex()"
+Nov 28 15:03:13 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'okinawa'@'localhost' (using password: YES)]
+Nov 28 15:03:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 28 15:03:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 28 15:03:13 symfony [info] {sfWebDebugLogger} Configuration 26.13 ms (9)
+Nov 28 15:03:13 symfony [info] {sfWebDebugLogger} Factories 34.30 ms (1)
+Nov 28 15:03:13 symfony [info] {sfWebDebugLogger} Action "photo/index" 26.88 ms (1)
+Nov 28 15:09:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'photo',  'action' => 'index',)
+Nov 28 15:09:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 28 15:09:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 28 15:09:43 symfony [info] {photoActions} Call "photoActions->executeIndex()"
+Nov 28 15:09:43 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[42000] [1044] Access denied for user 'okinawa'@'localhost' to database 'okinawa']
+Nov 28 15:09:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Nov 28 15:09:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 28 15:09:43 symfony [info] {sfWebDebugLogger} Configuration 0.61 ms (8)
+Nov 28 15:09:43 symfony [info] {sfWebDebugLogger} Factories 12.75 ms (1)
+Nov 28 15:09:43 symfony [info] {sfWebDebugLogger} Action "photo/index" 24.33 ms (1)
+Nov 28 15:10:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'photo',  'action' => 'index',)
+Nov 28 15:10:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Nov 28 15:10:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Nov 28 15:10:50 symfony [info] {photoActions} Call "photoActions->executeIndex()"
+Nov 28 15:10:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Nov 28 15:10:50 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `photo_mst` WHERE photo_mst.OPEN_DATE IS NOT NULL 
+Nov 28 15:10:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | SELECT photo_mst.ID, photo_mst.TITLE, photo_mst.FILENAME, photo_mst.COMMENT, photo_mst.WIDTH, photo_mst.HEIGHT, photo_mst.THUMB_WIDTH, photo_mst.THUMB_HEIGHT, photo_mst.ICON_WIDTH, photo_mst.ICON_HEIGHT, photo_mst.WANDER_WIDTH, photo_mst.WANDER_HEIGHT, photo_mst.SLIDE_WIDTH, photo_mst.SLIDE_HEIGHT, photo_mst.LONGITUDE, photo_mst.LATITUDE, photo_mst.SHOT_DATE, photo_mst.OPEN_DATE, photo_mst.MODIFIED_DATE, photo_mst.METAMODIFIED_DATE, photo_mst.FILEMTIME, photo_mst.CREATED_AT, photo_mst.UPDATED_AT FROM `photo_mst` WHERE photo_mst.OPEN_DATE IS NOT NULL  ORDER BY photo_mst.SHOT_DATE DESC LIMIT 7
+Nov 28 15:10:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   10.3 MB | mempeak:   10.3 MB | memdelta:      0.0 B | SELECT top_photo.ID, top_photo.PHOTO_ID, top_photo.TEXT_COLOR, top_photo.LINK_COLOR FROM `top_photo` WHERE top_photo.ID=15
+Nov 28 15:10:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   10.5 MB | mempeak:   10.5 MB | memdelta:      0.0 B | SELECT photo_mst.ID, photo_mst.TITLE, photo_mst.FILENAME, photo_mst.COMMENT, photo_mst.WIDTH, photo_mst.HEIGHT, photo_mst.THUMB_WIDTH, photo_mst.THUMB_HEIGHT, photo_mst.ICON_WIDTH, photo_mst.ICON_HEIGHT, photo_mst.WANDER_WIDTH, photo_mst.WANDER_HEIGHT, photo_mst.SLIDE_WIDTH, photo_mst.SLIDE_HEIGHT, photo_mst.LONGITUDE, photo_mst.LATITUDE, photo_mst.SHOT_DATE, photo_mst.OPEN_DATE, photo_mst.MODIFIED_DATE, photo_mst.METAMODIFIED_DATE, photo_mst.FILEMTIME, photo_mst.CREATED_AT, photo_mst.UPDATED_AT FROM `photo_mst` WHERE photo_mst.ID=342
+Nov 28 15:10:50 symfony [warning] {sfWebDebugLogger}  Warning at /home/nami/workspace/okinawa/apps/frontend/modules/photo/actions/actions.class.php on line 224 (file_get_contents(/home/okinawa_storage/text/top.txt): failed to open stream: No such file or directory)
+Nov 28 15:10:50 symfony [info] {photoActions} Change template to "CURRENT/top"
+Nov 28 15:10:50 symfony [info] {sfPHPView} Render "/home/nami/workspace/okinawa/apps/frontend/modules/photo/templates/topSuccess.php"
+Nov 28 15:10:50 symfony [info] {sfPHPView} Decorate content with "/home/nami/workspace/okinawa/apps/frontend/templates/layout.php"
+Nov 28 15:10:50 symfony [info] {sfPHPView} Render "/home/nami/workspace/okinawa/apps/frontend/templates/layout.php"
+Nov 28 15:10:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Nov 28 15:10:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Nov 28 15:10:50 symfony [info] {sfWebDebugLogger} Configuration 40.39 ms (11)
+Nov 28 15:10:50 symfony [info] {sfWebDebugLogger} Factories 10.80 ms (1)
+Nov 28 15:10:50 symfony [info] {sfWebDebugLogger} Action "photo/index" 52.32 ms (1)
+Nov 28 15:10:50 symfony [info] {sfWebDebugLogger} View "Success" for "photo/index" 11.23 ms (1)
+Nov 28 15:10:50 symfony [info] {sfWebResponse} Send content (100957 o)
